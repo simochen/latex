@@ -1,0 +1,45 @@
+\documentclass[UTF8,11pt]{article}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{verbatim} % 多行注释 comment 环境
+% 页边距设置
+\usepackage{geometry}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+% 段落和行距设置
+\usepackage{indentfirst} % 段落首行缩进
+\setlength{\parindent}{2em} % 缩进2个汉字
+\linespread{1.2} % 行距缩放因子(x倍字号)
+% 代码段设置
+\usepackage{listings}
+\usepackage{fontspec}
+\newfontfamily\monaco{Monaco}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codemauve}{rgb}{0.58,0,0.82}
+\lstset{basicstyle=\small\monaco, tabsize=4, breaklines=true, columns=flexible, commentstyle=\color{codegreen}, keywordstyle=\color{blue}, stringstyle=\color{codemauve}, rulesepcolor=\color{red!20!green!20!blue!20}}
+% 图表格式设置
+\usepackage{caption}
+\captionsetup{labelsep=period}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\usepackage{subfigure}
+% 字体设置
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\setCJKmainfont
+      [
+        BoldFont = AdobeHeitiStd-Regular ,
+        ItalicFont = AdobeKaitiStd-Regular
+      ] {AdobeSongStd-Light}
+% 设置图形文件的搜索路径
+\graphicspath{{figure/}{figures/}{image/}{images/}{graph/}{graphs}}
+
+
+\begin{document}
+
+% 文档
+\include{body/recog_char}
+
+\end{document}
